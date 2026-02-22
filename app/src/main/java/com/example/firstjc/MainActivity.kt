@@ -61,6 +61,7 @@ fun Greeting() {
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                 color = Color.White
             )
+            Spacer(modifier = Modifier.height(100.dp))
 
             // Aquest Box és la "pantalla" on surten els números
             Box(
@@ -79,6 +80,7 @@ fun Greeting() {
                     modifier = Modifier.padding(16.dp) // Perquè el número no toqui la vora de la caixa
                 )
             }
+            Spacer(modifier = Modifier.height(16.dp))
 
             // --- A partir d'aquí munto les files de botons ---
 
@@ -177,7 +179,7 @@ fun afegirSigne(actual: String, nouSigne: String): String {
 fun BotoNumeros(text: String, modifier: Modifier = Modifier, colorFons: Color = Color.DarkGray, colorText: Color = Color.White, onClick: () -> Unit) {
     Button(
         onClick = onClick,
-        modifier = modifier.padding(2.dp),
+        modifier = modifier.padding(8.dp),
         shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp), // Cantos una mica rodons
         colors = ButtonDefaults.buttonColors(containerColor = colorFons, contentColor = colorText)
     ) {
