@@ -12,6 +12,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.firstjc.ui.theme.*
@@ -181,5 +182,13 @@ fun BotoNumeros(text: String, modifier: Modifier = Modifier, colorFons: Color = 
         colors = ButtonDefaults.buttonColors(containerColor = colorFons, contentColor = colorText)
     ) {
         Text(text = text, fontSize = 24.sp)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    FirstJCTheme {
+        Greeting()
     }
 }
