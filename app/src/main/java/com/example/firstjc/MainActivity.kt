@@ -2,6 +2,7 @@
 package com.example.firstjc
 
 // Importo totes les eines que necessitaré
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -46,6 +47,7 @@ fun Greeting() {
             modifier = Modifier
                 .padding(innerPadding) // Aplico aquest espai de seguretat a la meva columna
                 .fillMaxSize() // Vull que ocupi tot el mòbil
+                .background(Color.Black)
         ) {
             // Aquí dibuixo el títol. Li poso un fons gris i lletra blanca perquè sembli un cartell
             Text(
@@ -75,6 +77,7 @@ fun Greeting() {
             ) {
                 Text(
                     text = estat,
+                    color = Color.White,
                     fontSize = 64.sp,
                     textAlign = androidx.compose.ui.text.style.TextAlign.End,
                     modifier = Modifier.padding(16.dp) // Perquè el número no toqui la vora de la caixa
